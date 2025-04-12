@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, MapPin, Send } from 'lucide-react'
+import { Download, Instagram, Linkedin, MapPin, Send } from 'lucide-react'
 import React from 'react'
 import { Button } from './ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
@@ -20,6 +20,10 @@ function Sidebar() {
 
       <Button asChild className='bg-green-700 hover:bg-green-900 animate-bounce'>
         <a href="mailto:joaovictormcalaca@gmail.com?subject=Olá!">Contato <Send /></a>
+      </Button>
+
+      <Button asChild className='bg-green-700 hover:bg-green-900'>
+        <a href="curriculo.pdf" target='_blank'>Baixar currículo <Download /></a>
       </Button>
 
       <div className="flex flex-col gap-4">
