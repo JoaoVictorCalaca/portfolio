@@ -1,16 +1,17 @@
 'use client';
+import Header from "@/components/Header";
 import MainContent from "@/components/MainContent";
 import Sidebar from "@/components/Sidebar";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Instagram, Linkedin, MapPin, Send } from "lucide-react";
 
 export default function Home() {
 
   return (
-    <div className="flex flex-col sm:flex-row h-screen w-screen overflow-x-hidden">
-      <Sidebar/>
-      <MainContent/>
+    <div className="flex flex-col w-screen h-screen overflow-x-hidden transition-all duration-500 scroll-smooth ease-linear">
+      <Header />
+      <div className="flex flex-col sm:flex-row mt-20">
+        <Sidebar />
+        <MainContent />
+      </div>
     </div>
   );
 }

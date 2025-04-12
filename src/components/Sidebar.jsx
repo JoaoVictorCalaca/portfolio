@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 
 function Sidebar() {
   return (
-    <div className="flex flex-col sm:w-1/4 w-full h-screen p-4 gap-4">
+    <div className="flex flex-col sm:w-1/4 w-full p-4 gap-4">
       <div className="flex sm:flex-col  gap-4">
         <Avatar className='w-100% h-100% min-h-[8rem] min-w-[8rem]'>
           <AvatarImage src="https://github.com/joaovictorcalaca.png" alt="@jvcalaca" />
@@ -14,7 +14,7 @@ function Sidebar() {
 
         <div>
           <h1 className="text-gray-100 text-2xl font-bold">João Víctor</h1>
-          <h2 className="text-gray-100">Técnico em informática e graduando em Eng. da Computação no <a className='underline' href='https://ifgoiano.edu.br/home/index.php/cursos-superiores-trindade/10712-engenharia-da-computacao.html' target='_blank'>IF Goiano</a></h2>
+          <h2 className="text-gray-100">Técnico em informática para Internet e graduando em Eng. da Computação no <a className='underline' href='https://ifgoiano.edu.br/home/index.php/cursos-superiores-trindade/10712-engenharia-da-computacao.html' target='_blank'>IF Goiano</a></h2>
         </div>
       </div>
 
