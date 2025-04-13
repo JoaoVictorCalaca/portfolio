@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Carousel,
   CarouselContent,
@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/carousel"
 import { Card, CardContent } from './ui/card'
 import { Separator } from './ui/separator'
-import { Section, Send } from 'lucide-react'
+import { Copy, CopyCheck, Send } from 'lucide-react'
 import Stack from './Stack'
 import Image from 'next/image'
 import { Button } from './ui/button'
@@ -63,6 +63,18 @@ const stacks = [
 
 
 function MainContent() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText('joaovictormcalaca@gmail.com')
+      setCopied(true)
+    } catch (e) {
+      console.error(`Error copying email: ${e}`);
+      
+    }
+  }
+
   return (
     <div className="sm:w-3/4 w-full p-4">
       <main className="w-full flex flex-col rounded-sm border-1 border-zinc-700">
@@ -76,14 +88,28 @@ function MainContent() {
         <section id='aboutMe' className="p-4">
           <h2 className='text-white text-2xl'>Sobre mim 👨🏽‍💻</h2>
           <Separator className='self-center my-4' />
-          <div className='flex flex-col sm:flex-row gap-6'>
-            <div className='bg-green-600 rounded-full flex justify-center items-center'>
-              <Image src='/character.png' width={500} height={500} alt='Character' />
+          <div className='flex flex-col gap-6'>
+            <div className='flex flex-col sm:flex-row gap-6'>
+              <Image className='w-full sm:max-w-1/3 rounded-md' src='/pixelCharacter.png' width={500} height={500} alt='Character' />
+
+              <p className='text-gray-100 text-lg'>Sou um desenvolvedor Full Stack e Mobile apaixonado por tecnologia. Atualmente cursando Engenharia da Computação no IF Goiano Campus Trindade, também sou técnico em Informática para Internet no mesmo Instituto desde 2024. Participo de projetos de iniciação científica no instituto, ja tendo recebido certificado de Projeto Destaque da Semana Nacional de Ciência e Tecnologia do Instituto Federal. Também ja participei de atividades de monitoria da matéria de lógica de programação, no ano de 2023, ajudando alunos a aprender o conteúdo e tirando dúvidas</p>
             </div>
-            <p className='text-gray-100 text-lg'>Sou um desenvolvedor Full Stack e Mobile apaixonado por tecnologia. Atualmente cursando Engenharia da Computação no IF Goiano Campus Trindade, também sou técnico em Informática para Internet no mesmo Instituto desde 2024. Participo de projetos de iniciação científica no instituto, ja tendo recebido certificado de Projeto Destaque da Semana Nacional de Ciência e Tecnologia do Instituto Federal. Também ja participei de atividades de monitoria da matéria de lógica de programação, no ano de 2023, ajudando alunos a aprender o conteúdo e tirando dúvidas</p>
+
+            <div className='sm:w-1/2 w-full flex flex-col'>
+              <div className='text-white flex justify-between px-4 items-center rounded-t-md bg-gray-800'>
+                <p>Meu email</p>
+                <Button onClick={handleCopy} className='cursor-pointer' size='icon' variant='transparent'> {copied ? <CopyCheck/> : <Copy/> } </Button>
+              </div>
+              <code className='text-white bg-gray-900 p-4 rounded-b-md'>
+                <span className='text-yellow-400'>const </span>
+                <span className='text-pink-400'>meuEmail </span>
+                <span>= </span>
+                <span className='text-blue-300'>&apos;joaovictormcalaca@gmail.com&apos;</span>
+              </code>
+            </div>
           </div>
 
-          <Button asChild className='bg-green-700 hover:bg-green-900 flex sm:invisible w-full mt-10'>
+          <Button asChild className='bg-cyan-600 hover:bg-cyan-700 flex sm:hidden w-full mt-10'>
             <a href="mailto:joaovictormcalaca@gmail.com?subject=Olá!">Contato <Send /></a>
           </Button>
         </section>

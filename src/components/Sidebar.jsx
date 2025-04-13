@@ -18,11 +18,11 @@ function Sidebar() {
         </div>
       </div>
 
-      <Button asChild className='bg-green-700 hover:bg-green-900 animate-bounce'>
+      <Button asChild className='bg-cyan-600 hover:bg-cyan-700 animate-bounce'>
         <a href="mailto:joaovictormcalaca@gmail.com?subject=Olá!">Contato <Send /></a>
       </Button>
 
-      <Button asChild className='bg-green-700 hover:bg-green-900'>
+      <Button asChild className='bg-cyan-600 hover:bg-cyan-700'>
         <a href="curriculo.pdf" target='_blank'>Baixar currículo <Download /></a>
       </Button>
 
@@ -39,7 +39,7 @@ function Sidebar() {
 
         <div className="text-white flex gap-2 items-center">
           <Linkedin />
-          <a href='www.linkedin.com/in/joaovictorcalaca' target="_blank">@joaovictorcalaca</a>
+          <a href='https://linkedin.com/in/joaovictorcalaca' target="_blank">@joaovictorcalaca</a>
         </div>
       </div>
     </div>
