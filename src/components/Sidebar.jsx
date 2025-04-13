@@ -23,7 +23,7 @@ function Sidebar() {
       </Button>
 
       <Button asChild className='bg-cyan-600 hover:bg-cyan-700'>
-        <a href="curriculo.pdf" target='_blank'>Baixar currículo <Download /></a>
+        <a download href="curriculo.pdf" target='_blank'>Baixar currículo <Download /></a>
       </Button>
 
       <div className="flex flex-col gap-4">

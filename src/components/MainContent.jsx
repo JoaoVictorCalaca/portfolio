@@ -13,54 +13,9 @@ import Stack from './Stack'
 import Image from 'next/image'
 import { Button } from './ui/button'
 import Repositories from './Repositories'
-
-const stacks = [
-  {
-    name: 'ReactJS',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-  },
-  {
-    name: 'NextJS',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
-  },
-  {
-    name: 'NodeJS',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-  },
-  {
-    name: 'Java Spring Boot',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg',
-  },
-  {
-    name: 'JavaScript',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-  },
-  {
-    name: 'TypeScript',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-  },
-  {
-    name: 'Figma',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
-  },
-  {
-    name: 'React Native/expo',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-  },
-  {
-    name: 'Postgresql',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
-  },
-  {
-    name: 'Bootstrap',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
-  },
-  {
-    name: 'Java',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
-  },
-];
-
+import { ScrollArea } from './ui/scroll-area'
+import { toast } from 'sonner'
+import { stacks } from '@/lib/stacks'
 
 function MainContent() {
   const [copied, setCopied] = useState(false);
@@ -69,9 +24,10 @@ function MainContent() {
     try {
       await navigator.clipboard.writeText('joaovictormcalaca@gmail.com')
       setCopied(true)
+      toast.success('Email copiado para área de transferência!')
     } catch (e) {
       console.error(`Error copying email: ${e}`);
-      
+
     }
   }
 
@@ -89,16 +45,22 @@ function MainContent() {
           <h2 className='text-white text-2xl'>Sobre mim 👨🏽‍💻</h2>
           <Separator className='self-center my-4' />
           <div className='flex flex-col gap-6'>
-            <div className='flex flex-col sm:flex-row gap-6'>
-              <Image className='w-full sm:max-w-1/3 rounded-md' src='/pixelCharacter.png' width={500} height={500} alt='Character' />
+            <div className='flex flex-col md:flex-row gap-6'>
+              <Image className='w-full h-full sm:max-w-1/3 rounded-md' src='/pixelCharacter.png' width={500} height={500} alt='Character' />
 
-              <p className='text-gray-100 text-lg'>Sou um desenvolvedor Full Stack e Mobile apaixonado por tecnologia. Atualmente cursando Engenharia da Computação no IF Goiano Campus Trindade, também sou técnico em Informática para Internet no mesmo Instituto desde 2024. Participo de projetos de iniciação científica no instituto, ja tendo recebido certificado de Projeto Destaque da Semana Nacional de Ciência e Tecnologia do Instituto Federal. Também ja participei de atividades de monitoria da matéria de lógica de programação, no ano de 2023, ajudando alunos a aprender o conteúdo e tirando dúvidas</p>
+              <p className='text-gray-100 text-lg'>{`Sou desenvolvedor Full Stack e Mobile, apaixonado por tecnologia e inovação. Atualmente, curso Engenharia da Computação no IF Goiano Campus Trindade e sou formado como Técnico em Informática para Internet pelo mesmo instituto (2024).
+
+                Tenho experiência com projetos de iniciação científica, tendo recebido o certificado de Projeto Destaque na Semana Nacional de Ciência e Tecnologia do Instituto Federal.
+
+                Em 2023, atuei como monitor na disciplina de Lógica de Programação, auxiliando colegas no entendimento de conceitos fundamentais e na resolução de dúvidas.
+
+                Estou sempre em busca de novos desafios que me permitam aprender, crescer e contribuir com soluções criativas e eficientes.`}</p>
             </div>
 
             <div className='sm:w-1/2 w-full flex flex-col'>
               <div className='text-white flex justify-between px-4 items-center rounded-t-md bg-gray-800'>
                 <p>Meu email</p>
-                <Button onClick={handleCopy} className='cursor-pointer' size='icon' variant='transparent'> {copied ? <CopyCheck/> : <Copy/> } </Button>
+                <Button onClick={handleCopy} className={`cursor-pointer ${copied ? 'text-green-400' : 'text-white'}`} size='icon' variant='transparent'> {copied ? <CopyCheck /> : <Copy />} </Button>
               </div>
               <code className='text-white bg-gray-900 p-4 rounded-b-md'>
                 <span className='text-yellow-400'>const </span>
@@ -131,7 +93,13 @@ function MainContent() {
 
           <Separator className='self-center my-4' />
 
-          <Repositories />
+          <ScrollArea className='w-full h-[400]'>
+            <Repositories />
+          </ScrollArea>
+        </section>
+
+        <section className='p-4'>
+
         </section>
       </main>
     </div>
