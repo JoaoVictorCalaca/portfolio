@@ -17,13 +17,9 @@ function Sidebar() {
           <h2 className="text-gray-100">Técnico em informática para Internet e graduando em Eng. da Computação no <a className='underline' href='https://ifgoiano.edu.br/home/index.php/cursos-superiores-trindade/10712-engenharia-da-computacao.html' target='_blank'>IF Goiano</a></h2>
         </div>
       </div>
-
-      <Button asChild className='bg-cyan-600 hover:bg-cyan-700 animate-bounce'>
-        <a href="mailto:joaovictormcalaca@gmail.com?subject=Olá!">Contato <Send /></a>
-      </Button>
-
+      
       <Button asChild className='bg-cyan-600 hover:bg-cyan-700'>
-        <a download href="curriculo.pdf" target='_blank'>Baixar currículo <Download /></a>
+        <a download href="Curriculo.pdf" target='_blank'>Baixar currículo <Download /></a>
       </Button>
 
       <div className="flex flex-col gap-4">
