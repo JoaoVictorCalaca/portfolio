@@ -1,112 +1,23 @@
-import React, { useState } from 'react'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-import { Card, CardContent } from './ui/card'
-import { Separator } from './ui/separator'
-import { Copy, CopyCheck, Send } from 'lucide-react'
-import Stack from './Stack'
+import { Download } from 'lucide-react'
 import Image from 'next/image'
-import { Button } from './ui/button'
-import Repositories from './Repositories'
-import { ScrollArea } from './ui/scroll-area'
-import { toast } from 'sonner'
-import { stacks } from '@/lib/stacks'
+import React from 'react'
 
 function MainContent() {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText('joaovictormcalaca@gmail.com')
-      setCopied(true)
-      toast.success('Email copiado para área de transferência!')
-    } catch (e) {
-      console.error(`Error copying email: ${e}`);
-
-    }
-  }
-
   return (
-    <div className="sm:w-3/4 w-full p-4">
-      <main className="w-full flex flex-col rounded-sm border-1 border-zinc-700">
-        <section className="p-4">
-          <h1 className='text-white text-2xl'>Hello, world! 👋🏽</h1>
-          <Separator className='self-center my-4' />
-          <h2 className='text-gray-100 text-lg'>Seja bem vindo ao meu portólio!</h2>
-        </section>
+    <div style={{ backgroundImage: 'url("/hero-bg.jpg")' }} className='w-full h-screen bg-cover p-6'>
+      <div className='flex sm:flex-row flex-col justify-center items-center gap-4'>
+        <div className='flex flex-col gap-4 sm:items-start items-center'>
+          <h1 className='text-6xl font-bold text-cyan-500'>{'<João Víctor/>'}</h1>
 
+          <p className='sm:w-[60%] w-full'>Técnico em informática para Internet e graduando em Eng. da Computação no <a className='underline' href='https://ifgoiano.edu.br/home/index.php/cursos-superiores-trindade/10712-engenharia-da-computacao.html'>IF Goiano</a></p>
 
-        <section id='aboutMe' className="p-4">
-          <h2 className='text-white text-2xl'>Sobre mim 👨🏽‍💻</h2>
-          <Separator className='self-center my-4' />
-          <div className='flex flex-col gap-6'>
-            <div className='flex flex-col md:flex-row gap-6'>
-              <Image className='w-full h-full sm:max-w-1/3 rounded-md' src='/pixelCharacter.png' width={500} height={500} alt='Character' />
+          <a className='bg-cyan-600 p-4 rounded-md w-fit flex items-center justify-center font-bold gap-4 hover:scale-105 transition duration-300' target='_blank' href="/Curriculo.pdf" download> <Download/> Baixar currículo</a>
+        </div>
 
-              <p className='text-gray-100 text-lg'>{`Sou desenvolvedor Full Stack e Mobile, apaixonado por tecnologia e inovação. Atualmente, curso Engenharia da Computação no IF Goiano Campus Trindade e sou formado como Técnico em Informática para Internet pelo mesmo instituto (2024).
-
-                Tenho experiência com projetos de iniciação científica, tendo recebido o certificado de Projeto Destaque na Semana Nacional de Ciência e Tecnologia do Instituto Federal.
-
-                Em 2023, atuei como monitor na disciplina de Lógica de Programação, auxiliando colegas no entendimento de conceitos fundamentais e na resolução de dúvidas.
-
-                Estou sempre em busca de novos desafios que me permitam aprender, crescer e contribuir com soluções criativas e eficientes.`}</p>
-            </div>
-
-            <div className='sm:w-1/2 w-full flex flex-col'>
-              <div className='text-white flex justify-between px-4 items-center rounded-t-md bg-gray-800'>
-                <p>Meu email</p>
-                <Button onClick={handleCopy} className={`cursor-pointer ${copied ? 'text-green-400' : 'text-white'}`} size='icon' variant='transparent'> {copied ? <CopyCheck /> : <Copy />} </Button>
-              </div>
-              <code className='text-white bg-gray-900 p-4 rounded-b-md'>
-                <span className='text-yellow-400'>const </span>
-                <span className='text-pink-400'>meuEmail </span>
-                <span>= </span>
-                <span className='text-blue-300'>&apos;joaovictormcalaca@gmail.com&apos;</span>
-              </code>
-            </div>
-          </div>
-
-          <Button asChild className='bg-cyan-600 hover:bg-cyan-700 flex sm:hidden w-full mt-10'>
-            <a href="mailto:joaovictormcalaca@gmail.com?subject=Olá!">Contato <Send /></a>
-          </Button>
-        </section>
-
-        <section id='stacks' className='p-4 flex flex-col gap-3'>
-          <h2 className='text-white text-2xl'>Tecnologias que domino 🧠</h2>
-
-          <Separator className='self-center my-4' />
-
-          <div className='flex flex-wrap gap-2'>
-            {stacks.map((stack, index) => (
-              <Stack stack={stack} key={index} />
-            ))}
-          </div>
-        </section>
-
-        <section id='repositories' className='p-4'>
-          <h2 className='text-white text-2xl'>Meus repositórios no github 💾</h2>
-
-          <Separator className='self-center my-4' />
-
-          <ScrollArea className='w-full h-[400]'>
-            <Repositories />
-          </ScrollArea>
-
-          <div className='flex flex-col gap-4 mt-4'>
-            <img src="https://github-readme-stats.vercel.app/api?username=joaovictorcalaca&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=tokyonight&locale=en&hide_border=false" className='w-1/2' alt="stats graph" />
-            <img src="https://github-readme-stats.vercel.app/api/top-langs?username=joaovictorcalaca&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=tokyonight&hide_border=false"  className='w-1/2' alt="languages graph" />
-          </div>
-        </section>
-
-        <section className='p-4'>
-
-        </section>
-      </main>
+        <div>
+          <Image className='w-full h-full rounded-md' src='/elements.png' width={500} height={500} alt='Character' />
+        </div>
+      </div>
     </div>
   )
 }

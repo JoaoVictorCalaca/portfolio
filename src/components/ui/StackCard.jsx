@@ -1,10 +1,10 @@
 import React from 'react'
-import { Card, CardContent } from './ui/card'
+import { Card, CardContent } from './card'
 import Image from 'next/image'
 
-function Stack({ stack }) {
+function StackCard({stack}) {
   return (
-    <Card className='border-1 bg-transparent hover:bg-gray-300 text-gray-300 hover:text-gray-800 hover:scale-110 duration-500 cursor-default'>
+    <Card className='border-1 w-fit text-gray-800 hover:scale-110 duration-500 cursor-default'>
       <CardContent>
         {stack.iconUrl ? (
           <div className='flex items-center justify-center gap-2'>
@@ -15,13 +15,15 @@ function Stack({ stack }) {
               height={20}
             />
             <p>{stack.name}</p>
-            </div>
+          </div>
         ) : (
-          <div className="w-12 h-12 bg-zinc-700 rounded" />
+          <div className='flex items-center justify-center gap-2'>
+            <p>{stack.name}</p>
+          </div>
         )}
       </CardContent>
     </Card>
   )
 }
 
-export default Stack
+export default StackCard
