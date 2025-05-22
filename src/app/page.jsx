@@ -2,6 +2,7 @@
 
 import AboutMe from "@/components/AboutMe";
 import MainContent from "@/components/MainContent";
+import Projects from "@/components/Projects";
 import Stacks from "@/components/Stacks";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <MainContent/>
       <AboutMe/>
       <Stacks/>
+      <Projects/>
     </div>
   );
 }
