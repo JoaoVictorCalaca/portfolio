@@ -22,13 +22,6 @@ const projects = [
     link: 'https://movie-discover-rho.vercel.app',
     stacks: 'Next.js, Tailwind CSS'
   },
-  {
-    title: 'Galeria de fotos',
-    description: 'Galeria de fotos simples, que consome uma API para exibir imagens aleatórias.',
-    image: '/project3.png',
-    link: 'https://pictures-api.vercel.app',
-    stacks: 'Next.js, Tailwind CSS'
-  },
 ]
 
 function Projects() {
