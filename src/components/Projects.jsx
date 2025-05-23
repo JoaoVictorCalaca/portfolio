@@ -48,14 +48,14 @@ function Projects() {
             stretch: 0,
             depth: 200,
             modifier: 1,
-            slideShadows: false
+            slideShadows: true
           }}
           autoplay={{
             delay: 3500,
             disableOnInteraction: false
           }}
           pagination={{ clickable: true }}
-          navigation={true}
+          navigation={false}
           className="w-full"
         >
           {projects.map((project, index) => (

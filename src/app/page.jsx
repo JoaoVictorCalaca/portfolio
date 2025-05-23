@@ -1,6 +1,7 @@
 'use client';
 
 import AboutMe from "@/components/AboutMe";
+import Contact from "@/components/Contact";
 import MainContent from "@/components/MainContent";
 import Projects from "@/components/Projects";
 import Stacks from "@/components/Stacks";
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutMe/>
       <Stacks/>
       <Projects/>
+      <Contact/>
     </div>
   );
 }
