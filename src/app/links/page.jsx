@@ -13,10 +13,10 @@ function page() {
       <div className='flex flex-col items-center gap-4 sm:w-1/3 w-1/2'>
         <Link href={'/'}> <Wallpaper /> Portfólio</Link>
         <Link href={'/Curriculo.pdf'} downloadable={true}> <File /> Currículo</Link>
-        <Link href={'https://www.linkedin.com/in/joaovictorcalaca'}> <Linkedin /> LinedIn</Link>
+        <Link href={'https://www.linkedin.com/in/joaovictorcalaca'}> <Linkedin /> LinkedIn</Link>
       </div>
 
-      <span className='absolute bottom-8'>2025, João Víctor Dev - Todos os direitos reservados</span>
+      <p className='absolute bottom-8 text-center'>2025, João Víctor Dev - Todos os direitos reservados</p>
     </div>
   )
 }
