@@ -5,11 +5,7 @@ import React from 'react'
 
 function page() {
   return (
-    <div className='bg-linear-to-r from-cyan-400 via-blue-400 to-indigo-400 w-full min-h-screen flex flex-col items-center py-4 gap-4'>
-      <div className='sm:w-1/3 w-full flex justify-center'>
-        <Image className='rounded-full w-1/2' src='https://github.com/joaovictorcalaca.png' width={460} height={460} alt='jv' />
-      </div>
-
+    <div className='bg-linear-to-r from-cyan-400 via-blue-400 to-indigo-400 w-full min-h-screen flex flex-col justify-center items-center py-4 gap-4'>
       <div className='flex flex-col items-center gap-4 sm:w-1/3 w-1/2'>
         <Link href={'/'}> <Wallpaper /> Portfólio</Link>
         <Link href={'/Curriculo.pdf'} downloadable={true}> <File /> Currículo</Link>
