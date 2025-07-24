@@ -22,11 +22,18 @@ const projects = [
     link: 'https://movie-discover-rho.vercel.app',
     stacks: 'Next.js, Tailwind CSS'
   },
-    {
+  {
     title: 'Simple Todo App',
     description: 'Ainda em desenvolvimento, uma aplicação simples de lista de tarefas.',
     image: '/project3.png',
     link: 'https://fast-todo-eta.vercel.app',
+    stacks: 'Next.js, Tailwind CSS'
+  },
+  {
+    title: 'jnews',
+    description: 'Ainda em desenvolvimento, um agregador de notícias que consome a API do NewsAPI.',
+    image: '/project4.png',
+    link: 'https://jnews-rouge.vercel.app',
     stacks: 'Next.js, Tailwind CSS'
   },
 ]
