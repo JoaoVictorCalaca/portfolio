@@ -9,6 +9,13 @@ import CarouselItem from './ui/CarouselItem'
 
 const projects = [
   {
+    title: 'Letrix',
+    description: 'Jogo inspirado no Termo, onde o jogador precisa adivinhar uma palavra de 5 letras em ate 5 tentativas.',
+    image: '/project5.png',
+    link: 'https://letrix-mocha.vercel.app',
+    stacks: 'Next.js, Tailwind CSS'
+  },
+  {
     title: 'Gerador de frases',
     description: 'App web simples que cria frases aleatórias e divertidas',
     image: '/project1.png',
