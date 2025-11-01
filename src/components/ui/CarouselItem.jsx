@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { SwiperSlide } from 'swiper/react'
 
@@ -14,7 +15,9 @@ function CarouselItem({ project }) {
           <h3 className="text-xl font-semibold text-white">{project.title}</h3>
           <p className="text-gray-300">{project.description}</p>
           <p className='text-emerald-400'>{project.stacks}</p>
-          <a target='_blank' href={project.link} className='bg-cyan-600 p-4 rounded-md w-fit hover:bg-white hover:text-cyan-600 transition duration-300'>Acessar</a>
+          <div className='flex gap-4'>
+            <Link href={`/projects/${project.id}`} className='bg-cyan-600 hover:bg-white border-2 border-cyan-600 p-4 rounded-md w-fit text-white transition duration-300'>Acessar</Link>
+          </div>
         </div>
       </div>
     </div>
