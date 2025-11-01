@@ -16,7 +16,7 @@ function CarouselItem({ project }) {
           <p className="text-gray-300">{project.description}</p>
           <p className='text-emerald-400'>{project.stacks}</p>
           <div className='flex gap-4'>
-            <Link href={`/projects/${project.id}`} className='bg-cyan-600 hover:bg-white border-2 border-cyan-600 p-4 rounded-md w-fit text-white transition duration-300'>Acessar</Link>
+            <Link href={`/projects/${project.id}`} className='bg-cyan-600 hover:bg-white border-2 border-cyan-600 p-4 rounded-md w-fit text-white hover:text-cyan-600 transition duration-300'>Acessar</Link>
           </div>
         </div>
       </div>
