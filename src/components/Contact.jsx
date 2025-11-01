@@ -1,15 +1,26 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Avatar } from './ui/avatar'
 import { AvatarFallback, AvatarImage } from '@radix-ui/react-avatar'
 import { AtSign, Copy, CopyCheck, Instagram, Linkedin } from 'lucide-react'
 import Image from 'next/image'
+import JSConfetti from 'js-confetti'
 
 function Contact() {
   const [copied, setCopied] = useState(false)
+  const jsConfettiRef = useRef(null);
+
+  useEffect(() => {
+    jsConfettiRef.current = new JSConfetti();
+  }, [])
 
   const copyEmailToClipboard = async () => {
     await navigator.clipboard.writeText('joaovictormcalaca@gmail.com')
     setCopied(true)
+
+    jsConfettiRef.current?.addConfetti({
+      emojis: ['😎', '✅',],
+      confettiNumber: 5
+    })
   }
 
   return (
