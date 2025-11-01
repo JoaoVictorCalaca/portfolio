@@ -82,6 +82,15 @@ export const others = [
     iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
   },
   {
+    name: 'Comunicação',
+  },
+  {
+    name: 'Manutenção de Computadores',
+  },
+  {
+    name: 'Infraestrutura de Redes',
+  },
+  {
     name: '🇺🇸 Inglês',
   },
   {

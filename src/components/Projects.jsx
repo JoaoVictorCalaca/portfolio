@@ -37,6 +37,13 @@ const projects = [
     stacks: 'Next.js, Tailwind CSS'
   },
   {
+    title: 'Simulador de consumo de água',
+    description: 'Aplicação que fornece dicas para economizar água geradas por IA.',
+    image: '/project6.png',
+    link: 'https://app-consumo-agua.vercel.app',
+    stacks: 'Next.js, Tailwind CSS, OpenAI API'
+  },
+  {
     title: 'jnews',
     description: 'Ainda em desenvolvimento, um agregador de notícias que consome a API do NewsAPI.',
     image: '/project4.png',

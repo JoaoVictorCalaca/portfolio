@@ -1,4 +1,4 @@
-import { Download } from 'lucide-react'
+import { Download, GitBranch } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 
@@ -11,7 +11,9 @@ function MainContent() {
 
           <p className='sm:w-[60%] w-full'>Técnico em informática para Internet e graduando em Eng. da Computação no <a className='underline' href='https://ifgoiano.edu.br/home/index.php/cursos-superiores-trindade/10712-engenharia-da-computacao.html'>IF Goiano</a></p>
 
-          <a className='bg-cyan-600 p-4 rounded-md w-fit flex items-center justify-center font-bold gap-4 hover:scale-105 transition duration-300' target='_blank' href="/Curriculo.pdf" download> <Download/> Baixar currículo</a>
+          <a className='bg-cyan-600 p-4 rounded-md w-60 flex items-center font-bold gap-4 hover:scale-105 transition duration-300' target='_blank' href="/Curriculo.pdf" download> <Download /> Baixar currículo</a>
+          
+          <a className='hover:bg-cyan-600 border-cyan-600 border-2 p-4 rounded-md w-60 flex items-center font-bold gap-4 hover:scale-105 transition duration-300' target='_blank' href="https://github.com/joaovictorcalaca"> <GitBranch /> Meu Github</a>
         </div>
 
         <div>
