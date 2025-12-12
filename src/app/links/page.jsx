@@ -11,8 +11,6 @@ function page() {
         <Link href={'/Curriculo.pdf'} downloadable={true}> <File /> Currículo</Link>
         <Link href={'https://www.linkedin.com/in/joaovictorcalaca'}> <Linkedin /> LinkedIn</Link>
       </div>
-
-      <p className='absolute bottom-8 text-center'>2025, João Víctor Dev - Todos os direitos reservados</p>
     </div>
   )
 }
