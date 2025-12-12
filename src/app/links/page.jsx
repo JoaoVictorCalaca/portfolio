@@ -17,7 +17,11 @@ function page() {
 
 const Link = ({ href, children, downloadable }) => {
   return (
-    <a className='bg-white text-black w-full p-4 rounded-full flex gap-4 justify-center items-center hover:bg-zinc-800 hover:text-white transition-all duration-500' href={href} download={downloadable}> {children}</a>
+    <a
+      className='bg-white text-black w-full p-4 rounded-full flex gap-4 justify-center items-center hover:bg-zinc-800 hover:text-white transition-all duration-500'
+      href={href}
+      download={downloadable}
+    > {children}</a>
   )
 }
 
