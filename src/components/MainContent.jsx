@@ -9,7 +9,7 @@ function MainContent() {
         <div className='flex flex-col gap-4 sm:items-start items-center'>
           <h1 className='text-6xl font-bold text-cyan-500'>{'<João Víctor/>'}</h1>
 
-          <p className='sm:w-[60%] w-full'>Técnico em informática para Internet e graduando em Eng. da Computação no <a className='underline' href='https://ifgoiano.edu.br/home/index.php/cursos-superiores-trindade/10712-engenharia-da-computacao.html'>IF Goiano</a></p>
+          <p className='sm:w-[60%] w-full'>Técnico em informática para Internet e graduando em Eng. de Software na <a className='underline' href='https://www.unialfa.com.br/graduacao/engenharia-de-software/?tipo=bacharelado'>Uni Alfa</a></p>
 
           <a className='bg-cyan-600 p-4 rounded-md w-60 flex items-center font-bold gap-4 hover:scale-105 transition duration-300' target='_blank' href="/Curriculo.pdf" download> <Download /> Baixar currículo</a>
           

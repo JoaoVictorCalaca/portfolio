@@ -51,7 +51,7 @@ function Experience() {
           className="vertical-timeline-element--work"
           contentStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
           contentArrowStyle={{ borderRight: '7px solid  rgb(16, 204, 82)' }}
-          date="2025 - presente"
+          date="2025"
           iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
           icon={<University />}
         >
@@ -73,6 +73,21 @@ function Experience() {
           <h4 className="vertical-timeline-element-subtitle">Trindade, GO</h4>
           <p>
             Consegui minha primeira oportunidade profissional como técnico de TI na empresa Vila São José Bento Cottolengo, onde aplico meus conhecimentos técnicos para gerenciar e solucionar problemas relacionados à infraestrutura de TI, manutenção de computadores e desenvolvimento de alguns sistemas para a instituição.
+          </p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: '#ff8600', color: '#fff' }}
+          contentArrowStyle={{ borderRight: '7px solid  ff8600' }}
+          date="2026 - presente"
+          iconStyle={{ background: '#ff8600', color: '#fff' }}
+          icon={<University />}
+        >
+          <h3 className="vertical-timeline-element-title">Mudança de curso</h3>
+          <h4 className="vertical-timeline-element-subtitle">Goiânia, GO</h4>
+          <p>
+            Buscando um curso superior com ênfase em desenvolvimento de sistemas, optei por me transferir pro curso de Eng. de Software no Centro Universitário Alves Faria.
           </p>
         </VerticalTimelineElement>
 
