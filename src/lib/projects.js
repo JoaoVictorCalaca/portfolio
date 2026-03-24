@@ -9,30 +9,12 @@ export const projects = [
     stacks: 'Next.js, Tailwind CSS'
   },
   {
-    id: 2,
-    title: 'Gerador de frases',
-    description: 'App web simples que cria frases aleatórias e divertidas',
-    longDescription: 'Este aplicativo web é uma ferramenta divertida e simples que gera frases aleatórias para entreter os usuários. Com uma interface amigável, os usuários podem clicar em um botão para receber uma nova frase a cada vez, proporcionando momentos de diversão e surpresa. O gerador de frases é ideal para quem busca inspiração rápida ou apenas quer se divertir com combinações inesperadas de palavras.',
-    image: '/project1.png',
-    link: 'https://daily-advice-ochre.vercel.app',
-    stacks: 'Next.js, Tailwind CSS'
-  },
-  {
     id: 3,
     title: 'Movie Discover',
     description: 'Site simples para buscar filmes, consumindo a api do TMDB.',
     longDescription: 'Movie Discover é um site intuitivo que permite aos usuários buscar e descobrir filmes de maneira fácil e rápida. Utilizando a API do TMDB (The Movie Database), o site oferece uma vasta coleção de títulos, gêneros e informações detalhadas sobre cada filme. Os usuários podem pesquisar por nome, explorar categorias populares e obter recomendações personalizadas, tornando a experiência de encontrar novos filmes agradável e eficiente.',
     image: '/project2.png',
     link: 'https://movie-discover-rho.vercel.app',
-    stacks: 'Next.js, Tailwind CSS'
-  },
-  {
-    id: 4,
-    title: 'Simple Todo App',
-    description: 'Ainda em desenvolvimento, uma aplicação simples de lista de tarefas.',
-    longDescription: 'Simple Todo App é uma aplicação em desenvolvimento que visa proporcionar aos usuários uma maneira fácil e eficiente de gerenciar suas tarefas diárias. Com uma interface limpa e intuitiva, o aplicativo permitirá que os usuários adicionem, editem e excluam tarefas, além de marcar itens como concluídos. O objetivo é ajudar os usuários a se organizarem melhor e aumentarem sua produtividade através de uma ferramenta simples e funcional.',
-    image: '/project3.png',
-    link: 'https://fast-todo-eta.vercel.app',
     stacks: 'Next.js, Tailwind CSS'
   },
   {
