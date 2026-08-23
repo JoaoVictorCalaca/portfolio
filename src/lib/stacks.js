@@ -1,99 +1,34 @@
+const icon = (slug, variant = "original") =>
+  `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${slug}/${slug}-${variant}.svg`;
+
 export const frontend = [
-  {
-    name: 'ReactJS',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-  },
-  {
-    name: 'NextJS',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
-  },
-  {
-    name: 'HTML',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-  },
-  {
-    name: 'CSS',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-  },
-  {
-    name: 'JavaScript',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-  },
-  {
-    name: 'TypeScript',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-  },
-  {
-    name: 'SCSS',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg',
-  },
-  {
-    name: 'React Native/expo',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-  },
-  {
-    name: 'Tailwind CSS',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg'
-  },
-  {
-    name: 'Bootstrap',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
-  },
+  { name: "ReactJS", iconUrl: icon("react") },
+  { name: "Next.js", iconUrl: icon("nextjs") },
+  { name: "JavaScript", iconUrl: icon("javascript") },
+  { name: "TypeScript", iconUrl: icon("typescript") },
+  { name: "React Native / Expo", iconUrl: icon("react") },
+  { name: "Tailwind CSS", iconUrl: icon("tailwindcss") },
+  { name: "SCSS", iconUrl: icon("sass") },
+  { name: "HTML & CSS", iconUrl: icon("html5") },
 ];
 
 export const backend = [
-  {
-    name: 'NodeJS',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-  },
-  {
-    name: 'Java Spring Boot',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg',
-  },
-  {
-    name: 'JavaScript',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-  },
-  {
-    name: 'TypeScript',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-  },
-  {
-    name: 'Postgresql',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
-  },
-  {
-    name: 'Java',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
-  },
+  { name: "Node.js", iconUrl: icon("nodejs") },
+  { name: "Java", iconUrl: icon("java") },
+  { name: "Java Spring Boot", iconUrl: icon("spring") },
+  { name: "PostgreSQL / SQL", iconUrl: icon("postgresql") },
+  { name: "Git & GitHub", iconUrl: icon("git") },
 ];
 
-export const others = [
+export const tools = [
+  { name: "Claude Code", symbol: "✳" },
+  { name: "Figma", iconUrl: icon("figma") },
   {
-    name: 'Figma',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+    name: { pt: "Infraestrutura de redes", en: "Network infrastructure" },
+    symbol: "◇",
   },
   {
-    name: 'Git',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+    name: { pt: "Manutenção de computadores", en: "Computer maintenance" },
+    symbol: "◇",
   },
-  {
-    name: 'Github',
-    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-  },
-  {
-    name: 'Comunicação',
-  },
-  {
-    name: 'Manutenção de Computadores',
-  },
-  {
-    name: 'Infraestrutura de Redes',
-  },
-  {
-    name: '🇺🇸 Inglês',
-  },
-  {
-    name: '🇪🇸 Espanhol'
-  }
 ];
