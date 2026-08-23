@@ -16,10 +16,10 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Movie Discover",
+    title: "CineLog",
     description: "Site simples para buscar filmes, consumindo a api do TMDB.",
     longDescription:
-      "Movie Discover é um site intuitivo que permite aos usuários buscar e descobrir filmes de maneira fácil e rápida. Utilizando a API do TMDB (The Movie Database), o site oferece uma vasta coleção de títulos, gêneros e informações detalhadas sobre cada filme. Os usuários podem pesquisar por nome, explorar categorias populares e obter recomendações personalizadas, tornando a experiência de encontrar novos filmes agradável e eficiente.",
+      "CineLog é um site intuitivo que permite aos usuários buscar e descobrir filmes de maneira fácil e rápida. Utilizando a API do TMDB (The Movie Database), o site oferece uma vasta coleção de títulos, gêneros e informações detalhadas sobre cada filme. Os usuários podem pesquisar por nome, explorar categorias populares e obter recomendações personalizadas, tornando a experiência de encontrar novos filmes agradável e eficiente.",
     blurb: {
       pt: "Busca e descoberta de filmes sobre a API do TMDB, com categorias e detalhes de cada título.",
       en: "Movie search and discovery on top of the TMDB API, with categories and per-title details.",
