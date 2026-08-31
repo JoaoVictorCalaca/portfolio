@@ -1,9 +1,8 @@
 "use client";
 
-import { Moon, Sun } from "lucide-react";
 import { dict } from "@/lib/i18n";
 
-export default function Nav({ lang, setLang, theme, toggleTheme }) {
+export default function Nav({ lang, setLang }) {
   const t = dict[lang].nav;
   const links = [
     ["#sobre", t.sobre],
@@ -23,54 +22,66 @@ export default function Nav({ lang, setLang, theme, toggleTheme }) {
         display: "flex",
         alignItems: "center",
         gap: 28,
-        padding: "14px 6vw",
-        background: "color-mix(in srgb, var(--color-bg) 88%, transparent)",
-        backdropFilter: "blur(8px)",
+        padding: "16px 6vw",
+        background: "color-mix(in srgb, var(--color-bg) 90%, transparent)",
+        backdropFilter: "blur(10px)",
         borderBottom: "1px solid var(--color-divider)",
       }}
     >
       <a
         href="#top"
         style={{
-          fontFamily: "var(--font-heading)",
-          fontWeight: 600,
-          fontSize: 19,
-          letterSpacing: ".02em",
-          color: "var(--color-text)",
+          display: "flex",
+          flexDirection: "column",
+          gap: 4,
           textDecoration: "none",
           marginRight: "auto",
         }}
       >
-        João Víctor{" "}
-        <span className="brand-meta">
-          <span style={{ color: "var(--color-accent)" }}>·</span>{" "}
+        <span
+          style={{
+            fontFamily: "var(--font-heading)",
+            fontWeight: 700,
+            fontSize: 18,
+            letterSpacing: "-.01em",
+            color: "var(--color-text)",
+            textTransform: "uppercase",
+          }}
+        >
+          João Víctor
+        </span>
+        <span
+          className="brand-meta"
+          style={{ display: "flex", alignItems: "center", gap: 8 }}
+        >
+          <span style={{ width: 18, height: 3, background: "var(--color-accent)" }} />
           <span
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: 11,
-              letterSpacing: ".16em",
+              fontSize: 10.5,
+              letterSpacing: ".14em",
               textTransform: "uppercase",
-              opacity: 0.6,
+              color: "var(--color-muted)",
             }}
           >
             {t.brandRole}
           </span>
         </span>
       </a>
-      <div
-        className="nav-links"
-        style={{ display: "flex", gap: 22, alignItems: "center" }}
-      >
+      <div className="nav-links" style={{ display: "flex", gap: 26, alignItems: "center" }}>
         {links.map(([href, label]) => (
           <a
             key={href}
             href={href}
             className="nav-link"
             style={{
-              fontSize: 13,
+              fontFamily: "var(--font-heading)",
+              fontWeight: 600,
+              fontSize: 11.5,
+              letterSpacing: ".1em",
+              textTransform: "uppercase",
               color: "var(--color-text)",
               textDecoration: "none",
-              letterSpacing: ".02em",
             }}
           >
             {label}
@@ -94,12 +105,11 @@ export default function Nav({ lang, setLang, theme, toggleTheme }) {
             border: 0,
             padding: "2px 4px",
             font: "inherit",
+            fontFamily: "var(--font-heading)",
+            fontWeight: 700,
             fontSize: 11,
-            letterSpacing: ".14em",
-            color:
-              lang === "pt"
-                ? "var(--color-accent-deep)"
-                : "color-mix(in srgb, var(--color-text) 50%, transparent)",
+            letterSpacing: ".1em",
+            color: lang === "pt" ? "var(--color-accent)" : "var(--color-muted)",
           }}
         >
           PT
@@ -113,23 +123,14 @@ export default function Nav({ lang, setLang, theme, toggleTheme }) {
             border: 0,
             padding: "2px 4px",
             font: "inherit",
+            fontFamily: "var(--font-heading)",
+            fontWeight: 700,
             fontSize: 11,
-            letterSpacing: ".14em",
-            color:
-              lang === "en"
-                ? "var(--color-accent-deep)"
-                : "color-mix(in srgb, var(--color-text) 50%, transparent)",
+            letterSpacing: ".1em",
+            color: lang === "en" ? "var(--color-accent)" : "var(--color-muted)",
           }}
         >
           EN
-        </button>
-        <button
-          onClick={toggleTheme}
-          title={theme === "dark" ? t.themeToLight : t.themeToDark}
-          aria-label={theme === "dark" ? t.themeToLight : t.themeToDark}
-          className="theme-toggle"
-        >
-          {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
         </button>
       </div>
     </nav>

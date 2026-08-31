@@ -8,8 +8,6 @@ export const dict = {
       trajetoria: "Trajetória",
       contato: "Contato",
       brandRole: "Eng. de Software",
-      themeToLight: "Ativar tema claro",
-      themeToDark: "Ativar tema escuro",
     },
     hero: {
       kicker: "Goiânia, GO — 2026",
@@ -160,8 +158,6 @@ export const dict = {
       trajetoria: "Path",
       contato: "Contact",
       brandRole: "Software Engineer",
-      themeToLight: "Switch to light theme",
-      themeToDark: "Switch to dark theme",
     },
     hero: {
       kicker: "Goiânia, GO — 2026",

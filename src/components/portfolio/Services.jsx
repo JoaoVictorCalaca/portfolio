@@ -14,11 +14,12 @@ export default function Services({ lang }) {
       <p
         style={{
           margin: "0 0 8px",
+          fontFamily: "var(--font-heading)",
+          fontWeight: 700,
           fontSize: 11,
           letterSpacing: ".2em",
           textTransform: "uppercase",
-          color: "var(--color-accent-deep)",
-          fontVariantNumeric: "tabular-nums",
+          color: "var(--color-accent)",
         }}
       >
         {t.kicker}
@@ -26,9 +27,10 @@ export default function Services({ lang }) {
       <h2
         style={{
           margin: "0 0 6vh",
-          fontWeight: 400,
-          fontSize: "clamp(30px,3.6vw,46px)",
-          letterSpacing: "-.02em",
+          fontWeight: 800,
+          fontSize: "clamp(28px,3.2vw,42px)",
+          letterSpacing: "-.01em",
+          textTransform: "uppercase",
         }}
       >
         {t.title}
@@ -51,17 +53,16 @@ export default function Services({ lang }) {
             <p
               style={{
                 margin: "0 0 14px",
-                fontVariantNumeric: "tabular-nums",
+                fontFamily: "var(--font-heading)",
+                fontWeight: 700,
                 fontSize: 12,
-                color: "var(--color-accent-deep)",
+                color: "var(--color-accent)",
               }}
             >
               {item.numeral}
             </p>
-            <h3 style={{ margin: "0 0 12px", fontWeight: 600, fontSize: 22 }}>
-              {item.title}
-            </h3>
-            <p style={{ margin: 0, fontSize: 14, lineHeight: 1.7, opacity: 0.78 }}>
+            <h3 style={{ margin: "0 0 12px", fontWeight: 700, fontSize: 21 }}>{item.title}</h3>
+            <p style={{ margin: 0, fontSize: 14, lineHeight: 1.7, color: "var(--color-muted)" }}>
               {item.desc}
             </p>
           </article>

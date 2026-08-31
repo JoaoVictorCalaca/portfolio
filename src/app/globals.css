@@ -1,26 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #f2f2f2;
-  --color-text: #344040;
-  --color-accent: #f2a20c;
-  --color-accent-deep: #8a5b04;
-  --color-surface: #e7e8e6;
-  --color-divider: color-mix(in srgb, #344040 18%, transparent);
+  --color-bg: #191c1d;
+  --color-surface: #232729;
+  --color-surface-2: #2a2f31;
+  --color-text: #f5f5f5;
+  --color-muted: #91a3ad;
+  --color-accent: #ed145b;
+  --color-accent-deep: #c20e49;
+  --color-divider: rgba(245, 245, 245, 0.12);
 
-  /* fixed ink/paper pair — the "trajetória" band is always dark-on-light-text
-     by design, independent of the site theme, so it doesn't use the tokens above */
-  --color-ink: #344040;
-  --color-paper: #f2f2f2;
-}
-
-:root[data-theme="dark"] {
-  --color-bg: #1a1d1c;
-  --color-text: #ece8e2;
-  --color-accent: #f5b23a;
-  --color-accent-deep: #f0ae3e;
-  --color-surface: #242826;
-  --color-divider: color-mix(in srgb, #f2f2f2 16%, transparent);
+  /* fixed dark/light pair — the "trajetória" band is always the darkest
+     surface in the page regardless of anything else, so it doesn't use the
+     swappable tokens above */
+  --color-ink: #131516;
+  --color-paper: #f5f5f5;
 }
 
 html {
@@ -37,14 +31,13 @@ body {
   color: var(--color-text);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 600;
-  line-height: 1.12;
-  letter-spacing: -0.015em;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: -0.01em;
   margin: 0;
 }
 
@@ -53,7 +46,7 @@ p {
 }
 
 a {
-  color: var(--color-accent-deep);
+  color: var(--color-accent);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
@@ -68,7 +61,8 @@ img {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+  background: color-mix(in srgb, var(--color-accent) 40%, transparent);
+  color: var(--color-text);
 }
 
 :focus-visible {
@@ -101,48 +95,39 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
   cursor: pointer;
   text-decoration: none;
   font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   line-height: 1.2;
   background: transparent;
   border: 1px solid transparent;
-  padding: 12px 22px;
-  border-radius: 4px;
-  transition: background 0.2s ease;
+  padding: 13px 26px;
+  border-radius: 2px;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 .btn-primary {
-  color: var(--color-accent-deep);
+  color: var(--color-text);
+  background: var(--color-accent);
   border-color: var(--color-accent);
 }
 .btn-primary:hover {
-  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
-  color: var(--color-accent-deep);
+  background: var(--color-accent-deep);
+  border-color: var(--color-accent-deep);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--color-accent) 35%, transparent);
 }
 .btn-secondary {
   color: var(--color-text);
   border-color: var(--color-divider);
 }
 .btn-secondary:hover {
-  background: color-mix(in srgb, var(--color-text) 7%, transparent);
-}
-.btn-on-dark {
-  color: var(--color-accent);
   border-color: var(--color-accent);
-}
-.btn-on-dark:hover {
-  background: color-mix(in srgb, var(--color-accent) 16%, transparent);
-}
-.btn-on-dark-secondary {
-  color: var(--color-bg);
-  border-color: color-mix(in srgb, var(--color-bg) 34%, transparent);
-}
-.btn-on-dark-secondary:hover {
-  background: color-mix(in srgb, var(--color-bg) 12%, transparent);
+  color: var(--color-accent);
 }
 .btn-block {
   width: 100%;
@@ -152,27 +137,28 @@ img {
 .tag {
   display: inline-flex;
   align-items: center;
-  font-size: 11px;
-  letter-spacing: 0.02em;
-  padding: 3px 10px;
-  border-radius: 3px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 11px;
+  border-radius: 2px;
 }
 .tag-outline {
   border: 1px solid var(--color-divider);
-  color: var(--color-text);
+  color: var(--color-muted);
 }
 .tag-neutral {
-  background: transparent;
+  background: color-mix(in srgb, var(--color-text) 6%, transparent);
   border: 1px solid var(--color-divider);
-  color: var(--color-text);
+  color: var(--color-muted);
 }
 
 /* ---- project image treatment ---- */
 .plate {
-  filter: sepia(0.22) saturate(0.82) contrast(1.05);
   box-sizing: border-box;
-  border: 6px solid var(--color-surface);
-  outline: 1px solid var(--color-divider);
+  border: 1px solid var(--color-divider);
 }
 
 /* ---- scroll reveal ---- */
@@ -200,7 +186,7 @@ img {
 
 /* ---- interactive states (no JS hover-state juggling) ---- */
 .nav-link:hover {
-  color: var(--color-accent-deep);
+  color: var(--color-accent);
 }
 
 .stack-heading {
@@ -208,54 +194,38 @@ img {
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-family: var(--font-body);
-  font-weight: 400;
-  opacity: 0.55;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-muted);
   padding-bottom: 10px;
   border-bottom: 1px solid var(--color-divider);
 }
 .stack-item {
-  transition: background 0.18s ease;
+  transition: background 0.2s ease;
+  border-radius: 3px;
 }
 .stack-item:hover {
-  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
 }
 
 .project-figure {
-  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.4s ease;
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.4s ease,
+    box-shadow 0.4s ease;
 }
 .project-card:hover {
-  color: var(--color-accent-deep);
+  color: var(--color-accent);
 }
 .project-card:hover .project-figure {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 32px color-mix(in srgb, var(--color-text) 22%, transparent);
+  transform: translateY(-6px);
+  border-color: var(--color-accent);
+  box-shadow: 0 16px 36px color-mix(in srgb, var(--color-accent) 25%, transparent);
 }
 
 .copy-btn {
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 .copy-btn:hover {
   border-color: var(--color-accent);
-}
-
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  padding: 0;
-  color: var(--color-text);
-  opacity: 0.7;
-  transition: opacity 0.2s ease, color 0.2s ease;
-}
-.theme-toggle:hover {
-  opacity: 1;
-  color: var(--color-accent-deep);
 }
 
 /* ---- responsive layout ---- */

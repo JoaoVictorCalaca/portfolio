@@ -89,11 +89,12 @@ export default function Contact({ lang }) {
           <p
             style={{
               margin: "0 0 8px",
+              fontFamily: "var(--font-heading)",
+              fontWeight: 700,
               fontSize: 11,
               letterSpacing: ".2em",
               textTransform: "uppercase",
-              color: "var(--color-accent-deep)",
-              fontVariantNumeric: "tabular-nums",
+              color: "var(--color-accent)",
             }}
           >
             {t.kicker}
@@ -101,20 +102,18 @@ export default function Contact({ lang }) {
           <h2
             style={{
               margin: "0 0 20px",
-              fontWeight: 400,
-              fontSize: "clamp(34px,5vw,72px)",
-              lineHeight: 1.02,
-              letterSpacing: "-.03em",
+              fontWeight: 800,
+              fontSize: "clamp(32px,4.6vw,64px)",
+              lineHeight: 1.04,
+              letterSpacing: "-.02em",
+              textTransform: "uppercase",
             }}
           >
             {t.titleLine1}
             <br />
-            {t.titleLine2}{" "}
-            <span style={{ fontStyle: "italic", color: "var(--color-accent-deep)" }}>
-              {t.titleEm}
-            </span>
+            {t.titleLine2} <span style={{ color: "var(--color-accent)" }}>{t.titleEm}</span>
           </h2>
-          <p style={{ margin: 0, maxWidth: "44ch", fontSize: 16, lineHeight: 1.7, opacity: 0.78 }}>
+          <p style={{ margin: 0, maxWidth: "44ch", fontSize: 16, lineHeight: 1.7, color: "var(--color-muted)" }}>
             {t.lead}
           </p>
         </div>
@@ -133,10 +132,12 @@ export default function Contact({ lang }) {
             >
               <span
                 style={{
-                  fontSize: 13,
+                  fontFamily: "var(--font-heading)",
+                  fontWeight: 600,
+                  fontSize: 12,
                   letterSpacing: ".14em",
                   textTransform: "uppercase",
-                  opacity: 0.5,
+                  color: "var(--color-muted)",
                   flex: "none",
                   width: 104,
                   whiteSpace: "nowrap",
@@ -158,7 +159,7 @@ export default function Contact({ lang }) {
                     width: 32,
                     height: 32,
                     flex: "none",
-                    color: copied ? "var(--color-accent-deep)" : "var(--color-text)",
+                    color: copied ? "var(--color-accent)" : "var(--color-text)",
                     font: "inherit",
                     fontSize: 13,
                   }}
@@ -168,7 +169,7 @@ export default function Contact({ lang }) {
               )}
             </div>
           ))}
-          <p style={{ margin: "14px 0 0", minHeight: 18, fontSize: 12.5, color: "var(--color-accent-deep)" }}>
+          <p style={{ margin: "14px 0 0", minHeight: 18, fontSize: 12.5, color: "var(--color-accent)" }}>
             {copied ? t.copyNote : ""}
           </p>
           <a

@@ -52,10 +52,12 @@ export default function LinksPage() {
         <p
           style={{
             margin: "0 0 8px",
+            fontFamily: "var(--font-heading)",
+            fontWeight: 700,
             fontSize: 11,
             letterSpacing: ".2em",
             textTransform: "uppercase",
-            color: "var(--color-accent-deep)",
+            color: "var(--color-accent)",
           }}
         >
           Goiânia, GO
@@ -63,14 +65,13 @@ export default function LinksPage() {
         <h1
           style={{
             margin: 0,
-            fontFamily: "var(--font-heading)",
-            fontWeight: 400,
-            fontSize: "clamp(30px,6vw,44px)",
-            letterSpacing: "-.02em",
+            fontWeight: 800,
+            fontSize: "clamp(28px,6vw,40px)",
+            letterSpacing: "-.01em",
+            textTransform: "uppercase",
           }}
         >
-          João Víctor{" "}
-          <span style={{ fontStyle: "italic", color: "var(--color-accent-deep)" }}>Calaça</span>
+          João Víctor <span style={{ color: "var(--color-accent)" }}>Calaça</span>
         </h1>
       </div>
 
@@ -82,7 +83,7 @@ export default function LinksPage() {
             download={download}
             {...(external ? { target: "_blank", rel: "noopener" } : {})}
             className="btn btn-secondary"
-            style={{ justifyContent: "flex-start", gap: 14, padding: "16px 20px", fontSize: 15 }}
+            style={{ justifyContent: "flex-start", gap: 14, padding: "16px 20px", fontSize: 14 }}
           >
             <Icon size={18} />
             {label}
@@ -90,7 +91,7 @@ export default function LinksPage() {
         ))}
       </nav>
 
-      <p style={{ margin: 0, fontSize: 12, opacity: 0.55 }}>© 2026 João Víctor Calaça</p>
+      <p style={{ margin: 0, fontSize: 12, color: "var(--color-muted)" }}>© 2026 João Víctor Calaça</p>
     </div>
   );
 }

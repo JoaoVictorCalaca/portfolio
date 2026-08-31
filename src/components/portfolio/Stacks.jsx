@@ -40,13 +40,11 @@ function StackList({ items, lang }) {
                 style={{ width: 20, height: 20, opacity: 0.85 }}
               />
             ) : (
-              <span
-                style={{ width: 20, textAlign: "center", color: "var(--color-accent-deep)" }}
-              >
+              <span style={{ width: 20, textAlign: "center", color: "var(--color-accent)" }}>
                 {item.symbol}
               </span>
             )}
-            <span style={{ fontSize: 14.5 }}>{name}</span>
+            <span style={{ fontSize: 14.5, color: "var(--color-text)" }}>{name}</span>
           </li>
         );
       })}
@@ -78,17 +76,23 @@ export default function Stacks({ lang }) {
           <p
             style={{
               margin: "0 0 8px",
+              fontFamily: "var(--font-heading)",
+              fontWeight: 700,
               fontSize: 11,
               letterSpacing: ".2em",
               textTransform: "uppercase",
-              color: "var(--color-accent-deep)",
-              fontVariantNumeric: "tabular-nums",
+              color: "var(--color-accent)",
             }}
           >
             {t.kicker}
           </p>
           <h2
-            style={{ fontWeight: 400, fontSize: "clamp(30px,3.6vw,46px)", letterSpacing: "-.02em" }}
+            style={{
+              fontWeight: 800,
+              fontSize: "clamp(28px,3.2vw,42px)",
+              letterSpacing: "-.01em",
+              textTransform: "uppercase",
+            }}
           >
             {t.title}
           </h2>
@@ -120,7 +124,7 @@ export default function Stacks({ lang }) {
                 fontSize: 10.5,
                 letterSpacing: ".14em",
                 textTransform: "uppercase",
-                opacity: 0.55,
+                color: "var(--color-muted)",
               }}
             >
               {t.stats.repos}
@@ -144,7 +148,7 @@ export default function Stacks({ lang }) {
                 fontSize: 10.5,
                 letterSpacing: ".14em",
                 textTransform: "uppercase",
-                opacity: 0.55,
+                color: "var(--color-muted)",
               }}
             >
               {t.stats.stars}
@@ -168,7 +172,7 @@ export default function Stacks({ lang }) {
                 fontSize: 10.5,
                 letterSpacing: ".14em",
                 textTransform: "uppercase",
-                opacity: 0.55,
+                color: "var(--color-muted)",
               }}
             >
               {t.stats.since}

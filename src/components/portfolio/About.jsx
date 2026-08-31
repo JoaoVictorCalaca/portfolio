@@ -23,20 +23,22 @@ export default function About({ lang }) {
           <p
             style={{
               margin: "0 0 8px",
+              fontFamily: "var(--font-heading)",
+              fontWeight: 700,
               fontSize: 11,
               letterSpacing: ".2em",
               textTransform: "uppercase",
-              color: "var(--color-accent-deep)",
-              fontVariantNumeric: "tabular-nums",
+              color: "var(--color-accent)",
             }}
           >
             {t.kicker}
           </p>
           <h2
             style={{
-              fontWeight: 400,
-              fontSize: "clamp(30px,3.6vw,46px)",
-              letterSpacing: "-.02em",
+              fontWeight: 800,
+              fontSize: "clamp(28px,3.2vw,42px)",
+              letterSpacing: "-.01em",
+              textTransform: "uppercase",
             }}
           >
             {t.titleLine1}
@@ -51,25 +53,13 @@ export default function About({ lang }) {
               columns: 2,
               columnGap: "5vw",
               columnRule: "1px solid var(--color-divider)",
-              textAlign: "justify",
-              hyphens: "auto",
+              color: "var(--color-muted)",
               fontSize: 15.5,
-              lineHeight: 1.78,
+              lineHeight: 1.8,
             }}
           >
             <p style={{ margin: "0 0 16px" }}>
-              <span
-                style={{
-                  float: "left",
-                  fontFamily: "var(--font-heading)",
-                  fontSize: 62,
-                  lineHeight: 0.82,
-                  padding: "4px 10px 0 0",
-                  color: "var(--color-accent-deep)",
-                }}
-              >
-                {t.dropCap}
-              </span>
+              {t.dropCap}
               {t.paragraphs[0]}
             </p>
             <p style={{ margin: "0 0 16px" }}>{t.paragraphs[1]}</p>
@@ -82,7 +72,7 @@ export default function About({ lang }) {
                 className="tag tag-outline"
                 style={
                   l.flag === "🇧🇷"
-                    ? { borderColor: "var(--color-accent)", color: "var(--color-accent-deep)" }
+                    ? { borderColor: "var(--color-accent)", color: "var(--color-accent)" }
                     : undefined
                 }
               >

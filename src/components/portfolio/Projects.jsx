@@ -27,22 +27,36 @@ export default function Projects({ lang }) {
           <p
             style={{
               margin: "0 0 8px",
+              fontFamily: "var(--font-heading)",
+              fontWeight: 700,
               fontSize: 11,
               letterSpacing: ".2em",
               textTransform: "uppercase",
-              color: "var(--color-accent-deep)",
-              fontVariantNumeric: "tabular-nums",
+              color: "var(--color-accent)",
             }}
           >
             {t.kicker}
           </p>
           <h2
-            style={{ fontWeight: 400, fontSize: "clamp(30px,3.6vw,46px)", letterSpacing: "-.02em" }}
+            style={{
+              fontWeight: 800,
+              fontSize: "clamp(28px,3.2vw,42px)",
+              letterSpacing: "-.01em",
+              textTransform: "uppercase",
+            }}
           >
             {t.title}
           </h2>
         </div>
-        <p style={{ margin: 0, fontSize: 13, opacity: 0.6, maxWidth: "32ch", textAlign: "right" }}>
+        <p
+          style={{
+            margin: 0,
+            fontSize: 13,
+            color: "var(--color-muted)",
+            maxWidth: "32ch",
+            textAlign: "right",
+          }}
+        >
           {t.note}
         </p>
       </div>
@@ -71,7 +85,13 @@ export default function Projects({ lang }) {
           >
             <figure
               className="plate project-figure"
-              style={{ margin: 0, position: "relative", aspectRatio: "16/10", overflow: "hidden" }}
+              style={{
+                margin: 0,
+                position: "relative",
+                aspectRatio: "16/10",
+                overflow: "hidden",
+                background: "var(--color-surface)",
+              }}
             >
               <Image
                 src={p.image}
@@ -90,16 +110,15 @@ export default function Projects({ lang }) {
                   gap: 12,
                 }}
               >
-                <h3 style={{ margin: 0, fontWeight: 600, fontSize: 24 }}>{p.title}</h3>
-                <span style={{ fontSize: 12, color: "var(--color-accent-deep)" }}>↗</span>
+                <h3 style={{ margin: 0, fontWeight: 700, fontSize: 22 }}>{p.title}</h3>
+                <span style={{ fontSize: 12, color: "var(--color-accent)" }}>↗</span>
               </div>
               <p
                 style={{
                   margin: "8px 0 12px",
                   fontSize: 14,
                   lineHeight: 1.65,
-                  opacity: 0.78,
-                  color: "var(--color-text)",
+                  color: "var(--color-muted)",
                 }}
               >
                 {p.blurb[lang]}

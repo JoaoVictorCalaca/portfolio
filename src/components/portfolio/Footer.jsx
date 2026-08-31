@@ -16,7 +16,7 @@ export default function Footer({ lang }) {
         padding: "26px 6vw",
         borderTop: "1px solid var(--color-divider)",
         fontSize: 12,
-        color: "color-mix(in srgb, var(--color-text) 58%, transparent)",
+        color: "var(--color-muted)",
       }}
     >
       <span>{t.copyright}</span>

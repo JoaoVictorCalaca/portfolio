@@ -9,7 +9,7 @@ export default function Experience({ lang }) {
     <section
       id="trajetoria"
       data-reveal="1"
-      style={{ background: "var(--color-ink)", color: "var(--color-paper)", padding: "12vh 6vw" }}
+      style={{ background: "var(--color-surface)", padding: "12vh 6vw" }}
     >
       <div
         className="two-col"
@@ -23,11 +23,12 @@ export default function Experience({ lang }) {
           <p
             style={{
               margin: "0 0 8px",
+              fontFamily: "var(--font-heading)",
+              fontWeight: 700,
               fontSize: 11,
               letterSpacing: ".2em",
               textTransform: "uppercase",
               color: "var(--color-accent)",
-              fontVariantNumeric: "tabular-nums",
             }}
           >
             {t.kicker}
@@ -35,29 +36,22 @@ export default function Experience({ lang }) {
           <h2
             style={{
               margin: "0 0 20px",
-              fontWeight: 400,
-              fontSize: "clamp(30px,3.6vw,46px)",
-              letterSpacing: "-.02em",
+              fontWeight: 800,
+              fontSize: "clamp(28px,3.2vw,42px)",
+              letterSpacing: "-.01em",
+              textTransform: "uppercase",
             }}
           >
             {t.title}
           </h2>
-          <p
-            style={{
-              margin: 0,
-              fontSize: 14,
-              lineHeight: 1.7,
-              color: "color-mix(in srgb, var(--color-paper) 70%, transparent)",
-              maxWidth: "30ch",
-            }}
-          >
+          <p style={{ margin: 0, fontSize: 14, lineHeight: 1.7, color: "var(--color-muted)", maxWidth: "30ch" }}>
             {t.lead}
           </p>
           <div
             style={{
               marginTop: 34,
               paddingTop: 22,
-              borderTop: "1px solid color-mix(in srgb, var(--color-paper) 22%, transparent)",
+              borderTop: "1px solid var(--color-divider)",
             }}
           >
             <p
@@ -66,28 +60,20 @@ export default function Experience({ lang }) {
                 fontSize: 11,
                 letterSpacing: ".16em",
                 textTransform: "uppercase",
-                color: "color-mix(in srgb, var(--color-paper) 55%, transparent)",
+                color: "var(--color-muted)",
               }}
             >
               {t.academicLabel}
             </p>
-            <p style={{ margin: "10px 0 0", fontSize: 15, lineHeight: 1.6 }}>
-              {t.degree1} — <span style={{ opacity: 0.7 }}>{t.ongoing}</span>
+            <p style={{ margin: "10px 0 0", fontSize: 15, lineHeight: 1.6, color: "var(--color-text)" }}>
+              {t.degree1} — <span style={{ color: "var(--color-muted)" }}>{t.ongoing}</span>
               <br />
-              <span
-                style={{ fontSize: 13, color: "color-mix(in srgb, var(--color-paper) 65%, transparent)" }}
-              >
-                {t.degree1Sub}
-              </span>
+              <span style={{ fontSize: 13, color: "var(--color-muted)" }}>{t.degree1Sub}</span>
             </p>
-            <p style={{ margin: "14px 0 0", fontSize: 15, lineHeight: 1.6 }}>
-              {t.degree2} — <span style={{ opacity: 0.7 }}>{t.degree2Year}</span>
+            <p style={{ margin: "14px 0 0", fontSize: 15, lineHeight: 1.6, color: "var(--color-text)" }}>
+              {t.degree2} — <span style={{ color: "var(--color-muted)" }}>{t.degree2Year}</span>
               <br />
-              <span
-                style={{ fontSize: 13, color: "color-mix(in srgb, var(--color-paper) 65%, transparent)" }}
-              >
-                {t.degree2Sub}
-              </span>
+              <span style={{ fontSize: 13, color: "var(--color-muted)" }}>{t.degree2Sub}</span>
             </p>
           </div>
         </div>
@@ -97,7 +83,7 @@ export default function Experience({ lang }) {
             margin: 0,
             padding: "0 0 0 30px",
             position: "relative",
-            borderLeft: "1px solid color-mix(in srgb, var(--color-paper) 22%, transparent)",
+            borderLeft: "1px solid var(--color-divider)",
           }}
         >
           {t.steps.map((step, i) => (
@@ -124,13 +110,13 @@ export default function Experience({ lang }) {
               >
                 {step.period}
               </p>
-              <h3 style={{ margin: "0 0 8px", fontWeight: 600, fontSize: 21 }}>{step.title}</h3>
+              <h3 style={{ margin: "0 0 8px", fontWeight: 700, fontSize: 20 }}>{step.title}</h3>
               <p
                 style={{
                   margin: 0,
                   fontSize: 14,
                   lineHeight: 1.7,
-                  color: "color-mix(in srgb, var(--color-paper) 76%, transparent)",
+                  color: "var(--color-muted)",
                   maxWidth: "62ch",
                 }}
               >
@@ -148,17 +134,10 @@ export default function Experience({ lang }) {
                 height: 15,
                 borderRadius: "50%",
                 border: "1px solid var(--color-accent)",
-                background: "var(--color-ink)",
+                background: "var(--color-surface)",
               }}
             />
-            <p
-              style={{
-                margin: 0,
-                fontSize: 13,
-                color: "color-mix(in srgb, var(--color-paper) 55%, transparent)",
-                fontStyle: "italic",
-              }}
-            >
+            <p style={{ margin: 0, fontSize: 13, color: "var(--color-muted)", fontStyle: "italic" }}>
               {t.nextChapter}
             </p>
           </li>
